@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
+import 'api/api.dart';
+import 'models/movie_now_playing.dart';
+
 class MainApp extends StatefulWidget {
   const MainApp({super.key});
 
@@ -9,6 +12,15 @@ class MainApp extends StatefulWidget {
 }
 
 class _MainAppState extends State<MainApp> {
+
+  late Future<List<Movie_now>> getnowplaying;
+  @override
+  void initState(){
+    super.initState();
+    getnowplaying = Api().getnowplaying();
+    print('hello');
+  }
+
   @override
   Widget build(BuildContext context) {
     dynamic height = MediaQuery.of(context).size.height;
@@ -52,7 +64,7 @@ class _MainAppState extends State<MainApp> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Container(
-                          color: Colors.amber[900],
+                          color: Colors.grey[400],
                           // height: 100,
                           width: width,
                         ),
