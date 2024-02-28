@@ -1,27 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import './main.dart';
-import './homepage.dart';
+// import './main.dart';
+// import './homepage.dart';
 
 
-class Splash extends StatefulWidget {
-  const Splash({super.key});
+class Splash_widget extends StatefulWidget {
+  const Splash_widget({super.key});
 
   @override
-  State<Splash> createState() => _SplashState();
+  State<Splash_widget> createState() => _SplashState();
 }
-class _SplashState extends State<Splash> {
+class _SplashState extends State<Splash_widget> {
 @override
-void initState(){
-  super.initState();
-  _navigate();
-}
 
-_navigate()async{
-await Future.delayed(Duration(milliseconds: 500),(){});
-Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>MainApp()));
-
-}
 
 
   @override
