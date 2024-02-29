@@ -152,7 +152,7 @@ class _Movie_detailState extends State<Movie_detail> {
                         likeBuilder: (bool isLiked) {
                          return Icon(
                           Icons.favorite,
-                         color: isLiked ? Colors.red[800] : Colors.grey,
+                          color: isLiked ? Colors.red[800] : Colors.grey,
                           size: 30,
             );
           },

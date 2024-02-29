@@ -11,7 +11,7 @@ class Api2{
   Future<Movie_data> getmoviedetail(String id) async {
     final headers = {
       'Type' : 'get-movie-details',
-      'X-Rapidapi-Key': '9c62f05fa8msh1746e484bbd49c6p1b0f4ejsne6e4c3ea2103',
+      'X-Rapidapi-Key': '5794af3459msh96a2f5b81af19a2p1cdc17jsn7dd1aa41b2f4',
       'X-Rapidapi-Host': 'movies-tv-shows-database.p.rapidapi.com'
     };
     var dio = Dio();
