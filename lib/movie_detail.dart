@@ -137,7 +137,8 @@ class _Movie_detailState extends State<Movie_detail> {
                             throw 'Could not launch $url';
                           }
                         },
-                        child: Text('Open Video'),
+                        color: Colors.red[900],
+                        child: Text('Open Trailer'),
                       ),
                       
                       LikeButton(
