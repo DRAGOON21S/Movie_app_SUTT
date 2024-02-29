@@ -48,7 +48,7 @@ class _MainAppState extends State<MainApp> {
               appBar:AppBar(
 
                 title: Text("movie-app", textAlign:TextAlign.center),
-                backgroundColor: Colors.grey[600],
+                backgroundColor: Colors.red[800],
               ),
 
               body: SingleChildScrollView(
@@ -76,7 +76,7 @@ class _MainAppState extends State<MainApp> {
                     Padding(
                       padding: EdgeInsets.fromLTRB(10,1,10,1),
                       child:
-                      Text("Trending movies", style: TextStyle(fontSize: 24),),),
+                      Text("Playing Now", style: TextStyle(fontSize: 24),),),
 
                     SizedBox(
                       // height : height,
@@ -113,11 +113,16 @@ class _MainAppState extends State<MainApp> {
                                           child: Image.network(
                                             snapshot2.data!,
                                             fit: BoxFit.cover,
+                                            errorBuilder: (context, error, stackTrace) {
+                                            return Image.asset('assets/images/404_not_found.png', fit: BoxFit.cover);},
                                           ),
                                         ),
                                       ),),
                                     );
-                                  } else {
+                                  } 
+                                  else if (snapshot2.connectionState == ConnectionState.waiting) {
+                                    return Splash_widget();}
+                                  else {
                                     return CircularProgressIndicator();
                                   }
                                 },

@@ -1,20 +1,36 @@
 class Movie_data{
+
   dynamic  title;
-  dynamic id;
   dynamic description;
+  dynamic rating;
+  dynamic tagline;
+  dynamic year;
+  dynamic rated;
+  dynamic trailer;
+  
 
 
   Movie_data({
+
     required this.title,
-    required this.id, 
-    required this.description
+    required this.description,
+    required this.rating,
+    required this.tagline,
+    required this.year,
+    required this.rated,
+    required this.trailer,
   });
 
   factory Movie_data.fromJson(Map<dynamic, dynamic> json){
     return Movie_data(
+
       title : json["title"],
-      id: json["imdb_id"],
-      description: json["description"]
+      description: json["description"],
+      rating: json["imdb_rating"],
+      tagline: json["tagline"],
+      year: json["year"],
+      rated: json["rated"],
+      trailer: json["youtube_trailer_key"],
     );
   }
 
